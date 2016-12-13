@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+边框新样式
+border-image        设置所有边框图像的速记属性。
+border-radius       一个用于设置所有四个边框- *-半径属性的速记属性
+box-shadow          附加一个或多个下拉框的阴影
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: .0px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .div {
+            background: #0effc2;
+            width: 200px;
+            height: 200px;
+            text-align: center; /*文字水平居中*/
+            margin: 5px;
+            word-break: break-all; /*文字自动换行*/
+            float: left;
+        }
+
+        .border-radius_1 {
+            border-radius: 50%;
+            line-height: 200px; /*行高和父容器一样则垂直居中*/
+        }
+
+        .border-radius_2 {
+            border-radius: 5px 10px 15px 20px; /*左上 右上 右下 左下*/
+
+        }
+
+        .border-radius_3 {
+            border-radius: 50% 50% 0px 50%; /*左上 右上 右下 左下*/
+
+        }
+
+        .box-shadow_1 {
+            box-shadow: 5px 5px 10px 5px #888888; /*水平向右 垂直向下 阴影距离 阴影大小 颜色*/
+
+        }
+
+        .border-image_1 {
+            -webkit-border-image: url(../img/head_default.jpg) 30 30 round;
+
+        }
+
+        .title {
+            clear: both;
+            background: #a7a7a7;
+            height: 50px;
+            line-height: 50px
+        }
+        .box-sizing{
+            box-sizing: border-box;
+            padding:12px;
+            resize:both;/*用户自己可以调整大小*/
+            overflow:auto;
+        }
+
+    </style>
+</head>
+<body>
+<div class="title">border-radius</div>
+<div class="border-radius_1 div">border-radius: 50%;</div>
+<div class="border-radius_2 div">border-radius: 5px 10px 15px 20px;</div>
+<div class="border-radius_3 div">border-radius: 50% 50% 0px 50%;</div>
+
+<div class="title">box-shadow</div>
+<div class="box-shadow_1 div">box-shadow:5px 5px 10px 5px #888888;</div>
+
+<div class="title">border-image</div>
+<div class="border-image_1 div">border-image:url(../img/head_default.jpg) 30 30 round;</div>
+
+<div class="title">box-sizing</div>
+<div class="box-sizing div"> box-sizing: border-box;即使用了padding，尺寸仍然是要求的尺寸</div>
+
+</body>
+</html>

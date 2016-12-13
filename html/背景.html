@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+CSS3
+background-clip	规定背景的绘制区域。
+background-origin	规定背景图片的定位区域。
+background-size	规定背景图片的尺寸。
+
+CSS1
+background-color	指定要使用的背景颜色
+background-position	指定背景图像的位置
+background-repeat	指定如何重复背景图像
+background-attachment	设置背景图像是否固定或者随着页面的其余部分滚动。
+background-image	指定要使用的一个或多个背景图像
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .div {
+            padding: 10px;
+            border: 10px dotted #d26c79;
+            background: #0effc2;
+            width: 200px;
+            height: 200px;
+            text-align: center; /*文字水平居中*/
+            margin: 5px;
+            word-break: break-all; /*文字自动换行*/
+            float: left;
+        }
+
+        .background_1 {
+            background-size: 30px 30px;
+            background-image: url("../img/bg_home.png");
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        .background_2 {
+            background-size: 30px 30px;
+            background-image: url("../img/bg_home.png");
+            background-repeat: repeat;
+            background-clip: border-box;
+        }
+
+        .title {
+            clear: both;
+            background: #a7a7a7;
+            height: 50px;
+            line-height: 50px
+        }
+
+        .clip_1 {
+            background-clip: border-box;
+        }
+
+        .clip_2 {
+            background-clip: padding-box;
+        }
+
+        .clip_3 {
+            background-clip: content-box;
+        }
+
+        .clip_4 {
+        }
+
+    </style>
+</head>
+<body>
+<div class="title">border-radius</div>
+<div class="background_1 div">靠右居中</div>
+<div class="background_2 div">平铺</div>
+
+<!--background-clip值	说明
+border-box	默认值。背景绘制在边框方框内（剪切成边框方框）。
+padding-box	背景绘制在衬距方框内（剪切成衬距方框）。
+content-box	背景绘制在内容方框内（剪切成内容方框）。-->
+<div class="title">background-clip</div>
+<div class="clip_1 div">
+    <p>border-box</p>
+</div>
+<div class="clip_2 div"><p>padding-box</p></div>
+<div class="clip_3 div"><p>content-box</p></div>
+<div class="clip_4 div"><p>默认</p></div>
+
+</body>
+</html>

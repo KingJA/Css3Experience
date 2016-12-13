@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+hanging-punctuation	规定标点字符是否位于线框之外。	3
+punctuation-trim	规定是否对标点字符进行修剪。	3
+text-align-last	设置如何对齐最后一行或紧挨着强制换行符之前的行。	3
+text-emphasis	向元素的文本应用重点标记以及重点标记的前景色。	3
+text-justify	规定当 text-align 设置为 "justify" 时所使用的对齐方法。	3
+text-outline	规定文本的轮廓。	3
+text-overflow	规定当文本溢出包含元素时发生的事情。	3
+text-shadow	向文本添加阴影。	3
+text-wrap	规定文本的换行规则。	3
+word-break	规定非中日韩文本的换行规则。	3
+word-wrap	允许对长的不可分割的单词进行分割并换行到下一行。	3-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本效果</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: .0px;
+            font-size: 20px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .title {
+            clear: both;
+            background: #a7a7a7;
+            height: 50px;
+            line-height: 50px
+        }
+
+        .div {
+            background: #0effc2;
+            width: 200px;
+            height: 200px;
+            text-align: center; /*文字水平居中*/
+            margin: 5px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .text-shadow {
+            text-shadow: 5px 5px 2px #585858;
+        }
+
+        .singleLine
+        {
+            white-space:nowrap;/*不进行换行*/
+            width:200px;
+            overflow:hidden;/*内容会被修剪，并且其余内容是不可见的。*/
+            background: #0effc2;
+            float: left;
+            margin: 5px;
+        }
+        .doubleLine {
+            background: #0effc2;
+            overflow: hidden;
+            width:200px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body>
+
+<div class="title">文本效果</div>
+<div class="div text-shadow">text-shadow</div>
+<!--换行规则-->
+<!--
+normal	只在允许的换行点进行换行。
+none	不换行。元素无法容纳的文本会溢出。
+unrestricted	在任意两个字符间换行。
+suppress	压缩元素中的换行。浏览器只在行中没有其他有效换行点时进行换行。-->
+<div class="title">text-wrap</div>
+<div class="div"><p>默认</p>练习小腿就比较困难了，因为练力量小腿就会变粗！！！所以小腿的练习不能在短时间练成。说一个简单有效的方法</div>
+<div class="div" style="text-wrap: normal"><p>normal</p>练习小腿就比较困难了，因为练力量小腿就会变粗！！！所以小腿的练习不能在短时间练成。说一个简单有效的方法</div>
+<div class="div" style="text-wrap: none"><p>none</p>练习小腿就比较困难了，因为练力量小腿就会变粗！！！所以小腿的练习不能在短时间练成。说一个简单有效的方法</div>
+<div class="div" style="text-wrap: avoid"><p>avoid</p>练习小腿就比较困难了，因为练力量小腿就会变粗！！！所以小腿的练习不能在短时间练成。说一个简单有效的方法</div>
+
+<!--
+word-break
+normal	使用浏览器默认的换行规则。
+break-all	允许在单词内换行。
+keep-all	只能在半角空格或连字符处换行。-->
+<div class="title">word-break</div>
+<div class="div" style="word-break: normal"><p>normal</p>Many people think that money is omnipotent,Is that really true ?Money can buy medicine,But its cant buy healthMoney can buy clock,But its can be done</div>
+<div class="div" style="word-break: break-all"><p>break-all</p>Many people think that money is omnipotent,Is that really true ?Money can buy medicine,But its cant buy healthMoney can buy clock,But its can be done</div>
+<div class="div" style="word-break: keep-all"><p>keep-all</p>Many people think that money is omnipotent,Is that really true ?Money can buy medicine,But its cant buy healthMoney can buy clock,But its can be done</div>
+</body>
+
+<!--
+text-overflow
+clip	修剪文本。
+ellipsis	显示省略符号来代表被修剪的文本。
+string	使用给定的字符串来代表被修剪的文本。-->
+<div class="title">text-overflow</div>
+<div class="singleLine" style="text-overflow: clip ;overflow:hidden; ">clip:Many people think that money is omnipotent,Is that really true ?Money can buy medicine,But its cant buy healthMoney can buy clock,But its can be done</div>
+<div class="singleLine" style="text-overflow: ellipsis;overflow:hidden; ">单行ellipsis:Many people think that money is omnipotent,Is that really true ?Money can buy medicine,But its cant buy healthMoney can buy clock,But its can be done</div>
+<div class="doubleLine" style="text-overflow: ellipsis;overflow:hidden; ">多行ellipsis:Many people think that money is omnipotent,Is that really true ?Money can buy medicine,But its cant buy healthMoney can buy clock,But its can be done</div>
+
+
+
+
+</body>
+</html>

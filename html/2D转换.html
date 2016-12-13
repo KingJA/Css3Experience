@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+matrix(n,n,n,n,n,n)	定义 2D 转换，使用六个值的矩阵。
+translate(x,y)	定义 2D 转换，沿着 X 和 Y 轴移动元素。
+translateX(n)	定义 2D 转换，沿着 X 轴移动元素。
+translateY(n)	定义 2D 转换，沿着 Y 轴移动元素。
+scale(x,y)	定义 2D 缩放转换，改变元素的宽度和高度。
+scaleX(n)	定义 2D 缩放转换，改变元素的宽度。
+scaleY(n)	定义 2D 缩放转换，改变元素的高度。
+rotate(angle)	定义 2D 旋转，在参数中规定角度。
+skew(x-angle,y-angle)	定义 2D 倾斜转换，沿着 X 和 Y 轴。
+skewX(angle)	定义 2D 倾斜转换，沿着 X 轴。
+skewY(angle)	定义 2D 倾斜转换，沿着 Y 轴。-->
+
+<!--
+transition-duration
+time	规定完成过渡效果需要花费的时间（以秒或毫秒计）。 默认值是 0，意味着不会有效果。-->
+
+<!--
+transition-delay
+time	指定秒或毫秒数之前要等待切换效果开始
+-->
+<!--
+transition-timing-function
+linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。-->
+
+<!--
+transition-property
+none	没有属性会获得过渡效果。
+all	所有属性都将获得过渡效果。
+property	定义应用过渡效果的 CSS 属性名称列表，列表以逗号分隔。-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D转换</title>
+    <style>
+        @font-face {
+            font-family: Impact;
+            src: url("../font/impact.ttf");
+            font-family: taiji;
+            src: url("../font/taiji.otf");
+        }
+
+        * {
+            margin: 0px;
+            padding: .0px;
+            font-size: 20px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .title {
+            color: #fff;
+            padding-left: 25px;
+            clear: both;
+            background: #a7a7a7;
+            height: 50px;
+            line-height: 50px
+        }
+
+        .div {
+            font-family: Impact;
+            color: #242424;
+            transition-duration: 1s;
+            border-radius: 10px;
+            background: #0effc2;
+            width: 200px;
+            height: 200px;
+            text-align: center; /*文字水平居中*/
+            line-height: 200px;
+            margin: 20px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .translate:hover {
+            transform: translate(30px, 30px);
+        }
+
+        .translateX:hover {
+            transform: translateX(30px);
+        }
+
+        .translateY:hover {
+            transform: translateY(30px);
+        }
+
+        .scale:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        .scaleX:hover {
+            transform: scaleX(1.2);
+        }
+
+        .scaleY:hover {
+            transform: scaleY(1.2);
+        }
+
+        .rotate:hover {
+            transform: rotate(30deg);
+        }
+
+        .rotate:hover {
+            transform: rotate(30deg);
+        }
+
+        .skew:hover {
+            transform: skew(30deg, 30deg);
+        }
+
+        .skewX:hover {
+            transform: skewX(30deg);
+        }
+
+        .skewY:hover {
+            transform: skewY(30deg);
+        }
+
+        .group:hover {
+            transform: scale(0.2, 0.2) rotate(720deg); /*组合效果中间空格隔开*/
+        }
+    </style>
+</head>
+<body>
+<div class="title">translate 平移</div>
+<div class="div translate">translate(30px,30px)</div>
+<div class="div translateX">translateX(30px)</div>
+<div class="div translateY">translateY(30px)</div>
+
+<div class="title">scale 缩放</div>
+<div class="div scale">scale(1.2,1.2)</div>
+<div class="div scaleX">scaleX(1.2)</div>
+<div class="div scaleY">scaleY(1.2)</div>
+
+<div class="title">rotate 旋转</div>
+<div class="div rotate">rotate(30deg)</div>
+
+<div class="title">skew 倾斜</div>
+<div class="div skew">skew(30deg)</div>
+<div class="div skewX">skewX(30deg)</div>
+<div class="div skewY">skewY(30deg)</div>
+
+<div class="title">旋转 缩放组合</div>
+<div class="div group">rotate(720deg) scaleX(0.5)</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Internet Explorer 9+, Firefox, Chrome, Safari, 和 Opera 支持 WOFF (Web Open Font Format) 字体.
+Firefox, Chrome, Safari, 和 Opera 支持 .ttf(True Type字体)和.otf(OpenType)字体字体类型）。
+Chrome, Safari 和 Opera 也支持 SVG 字体/折叠.
+Internet Explorer 同样支持 EOT (Embedded OpenType) 字体.
+注意： Internet Explorer 8 以及更早的版本不支持新的 @font-face 规则。-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体</title>
+    <style>
+        @font-face {
+            font-family: Impact;
+            src: url("../font/impact.ttf");
+            font-family: taiji;
+            src: url("../font/taiji.otf");
+        }
+
+
+        * {
+            margin: 0px;
+            padding: .0px;
+            font-size: 20px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .title {
+            clear: both;
+            background: #a7a7a7;
+            height: 50px;
+            line-height: 50px
+        }
+
+        .div {
+            font-size: 30px;
+            background: #0effc2;
+            width: 200px;
+            height: 200px;
+            text-align: center; /*文字水平居中*/
+            line-height: 200px;
+            margin: 5px;
+            float: left;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<div class="title">字体</div>
+<div class="div font_1" style="font-family: Impact">Impact</div>
+<div class="div font_2" style="font-family: taiji">太极</div>
+</body>
+</html>

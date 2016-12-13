@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卡片上升动画</title>
+    <style>
+
+        @font-face {
+            font-family: Impact;
+            src: url("../font/impact.ttf");
+            font-family: taiji;
+            src: url("../font/taiji.otf");
+        }
+
+        * {
+            margin: 0px;
+            padding: .0px;
+            font-size: 20px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .title {
+            color: #fff;
+            padding-left: 25px;
+            clear: both;
+            background: #a7a7a7;
+            height: 50px;
+            line-height: 50px
+        }
+
+        .div {
+            font-family: Impact;
+            color: #242424;
+            transition-duration: 0.5s;
+            background: #0effc2;
+            width: 200px;
+            height: 200px;
+            text-align: center; /*文字水平居中*/
+            line-height: 200px;
+            margin: 20px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .translate1:hover {
+            box-shadow: 5px 5px 10px  #a4a4a4;
+        }
+
+        .translate2:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+<div class="title">卡片上升</div>
+<div class="div translate1">卡片上升1</div>
+<div class="div translate2">卡片上升2</div>
+</body>
+</html>
