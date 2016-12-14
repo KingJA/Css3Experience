@@ -14,7 +14,6 @@ $(document).ready(function () {
         hideSidebar();
     })
     mask.on("click", function () {
-        console.log("隐藏");
         hideSidebar();
     })
 
