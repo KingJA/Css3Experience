@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+相对定位：相对自己原来的位置，且原来的位置保持不变
+绝对定位：相对于最近一个已经定位了的父级元素，如果没有，则相对于html
+当你定义的CSS中有position属性值为absolute、relative或fixed，
+用z-index此取值方可生效。
+此属性参数值越大，则被层叠在最上面。
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <link rel="stylesheet" href="../css/定位.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="head_container">
+        <div class="head_top">
+        </div>
+        <div class="head_middle">
+        </div>  <div class="head_foot">
+        </div>
+    </div>
+</div>
+<div class="fix">
+    回到顶部
+</div>
+</body>
+</html>
