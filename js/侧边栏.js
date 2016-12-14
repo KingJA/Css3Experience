@@ -20,12 +20,12 @@ $(document).ready(function () {
 
     function showSidebar() {
         mask.fadeIn();
-        sidebar.animate({right: 0})
+        sidebar.animate({right: 0,backgroundColor: "#609e9a" },1000)
     }
 
     function hideSidebar() {
         mask.fadeOut();
-        sidebar.animate({right: -sidebar.width()})
+        sidebar.animate({right: -sidebar.width(),backgroundColor: "#848382"})
     }
 });
 
