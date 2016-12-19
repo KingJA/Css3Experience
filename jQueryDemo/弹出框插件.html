@@ -14,24 +14,24 @@
 </head>
 <body>
 <div id="mask"></div>
-<button class="show_dialog">对话框</button>
+<button class="show_dialog" onclick="show()">对话框</button>
 
-<div id="confirm_dialog">
+<!--<div id="confirm_dialog">
     <p id="confirm_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, laboriosam!</p>
    <div><div id="confirm_button">确定</div></div>
     <img src="../img/dialog_close.png" width="24px" height="24px" id="confirm_close">
-</div>
+</div>-->
 
 
 
 </body>
 <script src="../js/jquery-3.1.1.js"></script>
-<!--<script src="../js/弹出框插件.js"></script>-->
+<script src="../js/confirm.js"></script>
 
 <script>
-/*    $(".show_dialog").confirm({
-        title: "注意了", content: "今天将有强冷空气！！！"
-    });*/
+function show() {
+    $.showConfim({content:"恭喜你注册成功",confirmText:"OK"});
+}
 
 </script>
 </html>
