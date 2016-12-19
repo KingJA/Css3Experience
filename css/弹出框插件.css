@@ -1,16 +1,47 @@
-#mask{
-    background: rgba(0,0,0,0.4);
+#mask {
+    background: rgba(0, 0, 0, 0.4);
     position: fixed;
-    left:0px;
+    left: 0px;
     right: 0px;
     top: 0px;
     bottom: 0px;
-    display: none;
     z-index: -1;
 }
-#confirm_dialog{
-    background: #96ff00;
-    display: none;
+
+#confirm_dialog {
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
     width: 400px;
-    height: 300px;
+    box-sizing: border-box;
+}
+
+#confirm_button {
+    border-radius: 3px;
+    text-align: center;
+    width: 50px;
+    margin: 0px auto;
+    padding: 4px;
+    color: #50b2ff;
+    transition-duration: 0.3s;
+    letter-spacing:2px
+}
+
+#confirm_button:hover {
+
+    cursor: pointer;
+    background: #50b2ff;
+    color: #fff;
+}
+#confirm_close{
+    transition-duration: 0.3s;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    opacity:0;
+}
+/*关闭按钮经过 透明=>不透明*/
+#confirm_close:hover{
+    opacity:1;
 }
